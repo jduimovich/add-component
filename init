@@ -1,0 +1,4 @@
+
+oc new-project demo-backstage 
+oc new-app https://github.com/openshift/sti-ruby.git --context-dir=3.1/test/puma-test-app
+oc expose service/sti-ruby

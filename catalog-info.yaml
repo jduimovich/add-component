@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-backstage
+  description: "Catalog for demo-backstage namespace"  
+  annotations:  
+    backstage.io/kubernetes-id: demo-backstage 
+    backstage.io/kubernetes-namespace: demo-backstage 
+    backstage.io/techdocs-ref: dir:. 
+  tags: "kubernetes"
+spec:
+  type: service
+  owner: user:guest
+  lifecycle: experimental
+ 

@@ -1,0 +1,13 @@
+RESOURCES="deployment service route"
+NS=$(oc project --short)
+for crd in $RESOURCES
+do 
+    for resource in $(oc get $crd -n $NS -o name)
+    do  
+        echo $resource 
+        oc annotate $resource  -n $NS "backstage.io/kubernetes-id=add-component"
+        oc annotate $resource  -n $NS "backstage.io/kubernetes-namespace=default"
+    done 
+done 
+  
+
