@@ -1,4 +1,4 @@
-RESOURCES="deployment service route"
+RESOURCES="deployment service route pod"
 NS=$(oc project --short)
 for crd in $RESOURCES
 do 
