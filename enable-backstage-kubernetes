@@ -5,8 +5,8 @@ do
     for resource in $(oc get $crd -n $NS -o name)
     do  
         echo $resource 
-        oc annotate $resource  -n $NS "backstage.io/kubernetes-id=add-component"
-        oc annotate $resource  -n $NS "backstage.io/kubernetes-namespace=default"
+        oc annotate $resource  -n $NS "backstage.io/kubernetes-id=demo-backstage"
+        oc annotate $resource  -n $NS "backstage.io/kubernetes-namespace=demo-backstage"
     done 
 done 
   
